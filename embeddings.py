@@ -1,10 +1,9 @@
 # embeddings.py
 import os
 from dotenv import load_dotenv
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 load_dotenv()
 
 def get_embeddings():
-    # 384-dimensional embedding model
-    return HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    return GoogleGenerativeAIEmbeddings(model="models/embedding-001")
