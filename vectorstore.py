@@ -5,7 +5,7 @@
 import os
 from typing import List, Optional
 from pinecone import Pinecone, ServerlessSpec
-from langchain_pinecone import PineconeVectorStore
+from langchain_community.vectorstores import Pinecone as PineconeVectorStore
 from embeddings import get_embeddings
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
