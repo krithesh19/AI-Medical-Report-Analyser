@@ -301,3 +301,7 @@ else:
             # Display the response
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
+        # Footer
+st.markdown("---")
+st.markdown("<center>Built by <b>Kritheshvar Vinothkumar</b> & Sushmitha B | MSc Data & Computational Science, UCD 2025 | For educational purposes only</center>", unsafe_allow_html=True)
+
