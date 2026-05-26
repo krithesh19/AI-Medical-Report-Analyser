@@ -1,32 +1,18 @@
-# ===========================================
-# file: requirements.txt
-# (use your pinned versions; just ensure these are present)
-# ===========================================
-# LangChain core
-langchain==0.1.20
-langchain-core==0.1.53
-langchain-community==0.0.38
-langchain-pinecone==0.1.0
-langchain-text-splitters==0.0.2
-langchain-google-genai==0.0.9
-
-# Vector DB
+langchain==0.2.16
+langchain-core==0.2.38
+langchain-community==0.2.16
+langchain-pinecone==0.1.3
+langchain-text-splitters==0.2.4
+langchain-google-genai==1.0.10
 pinecone-client==3.2.2
-
-# LLM / Embeddings
-#google-generativeai>=0.7.2
 protobuf>=4.25,<5
-
-# Transformers (optional; not strictly required here)
 transformers==4.40.2
-sentence-transformers==2.6.1
-torch>=2.1,<3      # if you actually use sentence-transformers elsewhere
-
-# Streamlit + utils
+sentence-transformers==2.7.0
+torch>=2.1,<3
 streamlit==1.35.0
 pypdf==3.17.4
 tqdm==4.66.4
 python-dotenv==1.0.1
-huggingface_hub>=0.22,<0.26
+huggingface_hub>=0.22,<1.0
 accelerate
 duckduckgo-search>=6.1.0
