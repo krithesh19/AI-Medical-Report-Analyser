@@ -107,37 +107,6 @@ The system tracks metrics per session:
 
 ![Workflow Diagram](readmePics/workflow_horizontal1.png)
 
-Patient PDF / TXT
-│
-▼
-Document Ingestion
-(1000-char chunks, 150 overlap, session_id tag)
-│
-▼
-HuggingFace Embeddings (MiniLM-L6-v2, 384-dim)
-│
-├──────────────────────────────────┐
-▼                                  ▼
-PATIENT_INDEX (Pinecone)        GENERAL_INDEX (Pinecone)
-session_id filter               medical reference docs
-MMR k=10, λ=0.35               MMR k=6, λ=0.2
-│                                  │
-└──────────┬───────────────────────┘
-▼
-Merged Context
-[patient] + [helpbook]
-│
-▼ (fallback if empty)
-DuckDuckGo Search [web]
-│
-▼
-Gemini 1.5 Flash (temp=0.2)
-+ RunnableWithMessageHistory
-│
-▼
-Cited Answer + Evaluation Metrics
-
----
 
 ## ✨ Features
 
